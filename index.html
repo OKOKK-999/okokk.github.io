@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>任务管理应用 - 全栈演示</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✅ 我的任务列表</h1>
+            <p class="subtitle">全栈应用演示 - 前后端分离架构</p>
+        </header>
+
+        <!-- 添加任务区域 -->
+        <div class="add-task">
+            <input type="text" id="taskInput" placeholder="输入新任务..." maxlength="100">
+            <button onclick="addTask()">添加任务</button>
+        </div>
+
+        <!-- 任务统计 -->
+        <div class="stats">
+            <span>总计: <span id="totalCount">0</span></span>
+            <span>已完成: <span id="completedCount">0</span></span>
+            <span>未完成: <span id="pendingCount">0</span></span>
+        </div>
+
+        <!-- 任务列表 -->
+        <div class="task-list" id="taskList">
+            <div class="loading">加载中...</div>
+        </div>
+
+        <!-- 操作日志 -->
+        <div class="logs">
+            <h3>操作日志</h3>
+            <div class="log-container" id="logContainer">
+                <div class="log-item">📱 页面加载完成，等待用户操作...</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
